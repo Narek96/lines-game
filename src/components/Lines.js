@@ -52,7 +52,7 @@ class Lines extends Component {
       this.props.dispatch(unchoose());
       this.props.dispatch(relocateFuture(currentX, currentY, toX, toY));
       this.props.dispatch(next());
-      this.props.dispatch(markRemoveBalls());
+      this.props.dispatch(markRemoveBalls(currentX, currentY));
       this.props.dispatch(removeBalls());
       const { content } = this.props;
       for (let i = 0; i < addAmount; i++) {
